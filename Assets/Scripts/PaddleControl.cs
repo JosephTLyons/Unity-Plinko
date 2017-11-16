@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PaddleControl : MonoBehaviour 
 {
+    static int gameScore = 0;
     public KeyCode moveLeft, moveRight;
     public float speedX = 0;
 

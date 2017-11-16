@@ -3,7 +3,6 @@ using System.Collections;
 
 public class GameSetup : MonoBehaviour
 {
-	static int gameScore = 0;
     int ballCount;
     int ballDropDelayTime;
     int time;
