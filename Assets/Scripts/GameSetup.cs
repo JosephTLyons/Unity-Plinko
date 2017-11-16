@@ -5,20 +5,27 @@ public class GameSetup : MonoBehaviour
 {
 	static int gameScore = 0;
     int ballCount;
+    int ballDropDelayTime;
 
     static GameObject ball;
     public GameObject ballRef;
 
 	void Start () 
 	{
-        ballCount = 1;
+        ballCount = 3;
+        ballDropDelayTime = 40;
 	}
 
 	void Update()
     {
-        if ((ballCount--) > 0)
+        if (ballDropDelayTime-- <= 0)
         {
-            dropBall();
+            if ((ballCount--) > 0)
+            {
+                dropBall();
+            }
+
+            ballDropDelayTime = 40;
         }
     }
 
