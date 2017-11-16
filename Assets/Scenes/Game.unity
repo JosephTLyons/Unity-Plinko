@@ -2342,6 +2342,11 @@ Prefab:
       propertyPath: m_Name
       value: Wall Left
       objectReference: {fileID: 0}
+    - target: {fileID: 61853175651528572, guid: d4dfe6d7930564ec39bf1a4a18931368,
+        type: 2}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d4dfe6d7930564ec39bf1a4a18931368, type: 2}
   m_IsPrefabParent: 0
@@ -2633,6 +2638,11 @@ Prefab:
     - target: {fileID: 1777293495072780, guid: d4dfe6d7930564ec39bf1a4a18931368, type: 2}
       propertyPath: m_Name
       value: Wall Right
+      objectReference: {fileID: 0}
+    - target: {fileID: 61853175651528572, guid: d4dfe6d7930564ec39bf1a4a18931368,
+        type: 2}
+      propertyPath: m_Material
+      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d4dfe6d7930564ec39bf1a4a18931368, type: 2}
