@@ -1605,6 +1605,7 @@ GameObject:
   - component: {fileID: 1198165302}
   - component: {fileID: 1198165304}
   - component: {fileID: 1198165305}
+  - component: {fileID: 1198165306}
   m_Layer: 0
   m_Name: Paddle
   m_TagString: Player
@@ -1703,6 +1704,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 359e920a3f6644e1ea372f956b19a21b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  moveLeft: 276
+  moveRight: 275
+  speedX: 10
+--- !u!50 &1198165306
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1198165301}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 0.0001
+  m_LinearDrag: 0
+  m_AngularDrag: 0
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 6
 --- !u!1001 &1242103768
 Prefab:
   m_ObjectHideFlags: 0
@@ -2207,7 +2231,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4546843188737628, guid: d4dfe6d7930564ec39bf1a4a18931368, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 0.8121637
+      value: 0.57
       objectReference: {fileID: 0}
     - target: {fileID: 4546843188737628, guid: d4dfe6d7930564ec39bf1a4a18931368, type: 2}
       propertyPath: m_LocalPosition.z
@@ -2499,7 +2523,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4546843188737628, guid: d4dfe6d7930564ec39bf1a4a18931368, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 0.8121637
+      value: 0.57
       objectReference: {fileID: 0}
     - target: {fileID: 4546843188737628, guid: d4dfe6d7930564ec39bf1a4a18931368, type: 2}
       propertyPath: m_LocalPosition.z
