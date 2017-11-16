@@ -4,9 +4,23 @@ using UnityEngine;
 
 public class BallControl : MonoBehaviour 
 {
-	void Update () 
+    int playWoodenHitAudioDelay;
+    bool canPlayAudio;
+
+    void Start()
     {
-		
+        playWoodenHitAudioDelay = 0;
+        canPlayAudio = true;
+    }
+
+	void Update() 
+    {
+        if (playWoodenHitAudioDelay-- <= 0)
+        {
+            canPlayAudio = true;
+        }
+            
+
 	}
 
     void OnCollisionEnter2D(Collision2D collision)
@@ -19,7 +33,12 @@ public class BallControl : MonoBehaviour
 
         else if (collision.gameObject.tag == "Peg")
         {
-            // Play peg sound
+            if (canPlayAudio)
+            {
+                GetComponent<AudioSource>().Play();
+                canPlayAudio = false;
+                playWoodenHitAudioDelay = 10;
+            }
         }
     }
 }
