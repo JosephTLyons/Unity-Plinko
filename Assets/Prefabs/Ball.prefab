@@ -90,7 +90,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 69070ce7f01134c04912bfc068b1b012, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.67
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -170,6 +170,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: efc391f8be36643ebba08d9d544e2781, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  woodSound: {fileID: 0}
+  registerSound: {fileID: 0}
 --- !u!212 &212297571909651138
 SpriteRenderer:
   m_ObjectHideFlags: 1

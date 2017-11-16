@@ -9,6 +9,9 @@ public class BallControl : MonoBehaviour
     int playWoodenHitAfterDelay;
     bool canPlayAudio;
 
+    public AudioSource woodSound;
+    public AudioSource registerSound;
+
     void Start()
     {
         playWoodenHitAfterDelay = 0;
