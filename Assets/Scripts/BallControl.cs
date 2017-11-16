@@ -6,18 +6,18 @@ public class BallControl : MonoBehaviour
 {
     // These attributes are used to limit how quickly the audio sample can play
     // Without them, when the ball bounces, the sound is triggered very quickly and it sounds unnatural
-    int playWoodenHitAudioDelay;
+    int playWoodenHitAfterDelay;
     bool canPlayAudio;
 
     void Start()
     {
-        playWoodenHitAudioDelay = 0;
+        playWoodenHitAfterDelay = 0;
         canPlayAudio = true;
     }
 
 	void Update() 
     {
-        if (playWoodenHitAudioDelay-- <= 0)
+        if (playWoodenHitAfterDelay-- <= 0)
         {
             canPlayAudio = true;
         }
@@ -39,7 +39,7 @@ public class BallControl : MonoBehaviour
             {
                 GetComponent<AudioSource>().Play();
                 canPlayAudio = false;
-                playWoodenHitAudioDelay = 8;
+                playWoodenHitAfterDelay = 8;
             }
         }
     }
