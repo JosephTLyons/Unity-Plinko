@@ -39,7 +39,7 @@ public class BallControl : MonoBehaviour
             {
                 GetComponent<AudioSource>().Play();
                 canPlayAudio = false;
-                playWoodenHitAudioDelay = 10;
+                playWoodenHitAudioDelay = 8;
             }
         }
     }
