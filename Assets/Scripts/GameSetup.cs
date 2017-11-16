@@ -6,6 +6,7 @@ public class GameSetup : MonoBehaviour
 	static int gameScore = 0;
     int ballCount;
     int ballDropDelayTime;
+    int time;
 
     static GameObject ball;
     public GameObject ballRef;
@@ -13,7 +14,8 @@ public class GameSetup : MonoBehaviour
 	void Start () 
 	{
         ballCount = 3;
-        ballDropDelayTime = 40;
+        time = 40;
+        ballDropDelayTime = time;
 	}
 
 	void Update()
@@ -25,7 +27,7 @@ public class GameSetup : MonoBehaviour
                 dropBall();
             }
 
-            ballDropDelayTime = 40;
+            ballDropDelayTime = time;
         }
     }
 
