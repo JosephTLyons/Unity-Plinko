@@ -11,8 +11,12 @@ public class BallControl : MonoBehaviour
     public AudioSource woodSound;
     public AudioSource registerSound;
 
+    int ballValue;
+
     void Start()
     {
+        ballValue = Random.Range (1, 6);
+        GetComponentInChildren<TextMesh>().text = ballValue.ToString();
         playWoodenHitAfterDelay = 0;
     }
 
