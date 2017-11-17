@@ -7,12 +7,12 @@ public class BallControl : MonoBehaviour
     // These attributes are used to limit how quickly the audio sample can play
     // Without them, when the ball bounces, the sound is triggered very quickly and it sounds unnatural
     int woodHitSoundDelayTime;
-    public int ballValue;
+    public int ballWorth;
 
     void Start()
     {
-        ballValue = Random.Range (1, 6);
-        GetComponentInChildren<TextMesh>().text = ballValue.ToString();
+        ballWorth = Random.Range (1, 6);
+        GetComponentInChildren<TextMesh>().text = ballWorth.ToString();
         woodHitSoundDelayTime = 0;
     }
 
