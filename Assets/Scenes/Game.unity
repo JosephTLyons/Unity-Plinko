@@ -476,7 +476,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4546843188737628, guid: d4dfe6d7930564ec39bf1a4a18931368, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 7.56
+      value: 7.09
       objectReference: {fileID: 0}
     - target: {fileID: 4546843188737628, guid: d4dfe6d7930564ec39bf1a4a18931368, type: 2}
       propertyPath: m_LocalPosition.z
@@ -1858,7 +1858,7 @@ Rigidbody2D:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1198165301}
-  m_BodyType: 1
+  m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -2347,7 +2347,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4546843188737628, guid: d4dfe6d7930564ec39bf1a4a18931368, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 7.56
+      value: 7.09
       objectReference: {fileID: 0}
     - target: {fileID: 4546843188737628, guid: d4dfe6d7930564ec39bf1a4a18931368, type: 2}
       propertyPath: m_LocalPosition.z
@@ -2611,7 +2611,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4546843188737628, guid: d4dfe6d7930564ec39bf1a4a18931368, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 1
+      value: 0.53
       objectReference: {fileID: 0}
     - target: {fileID: 4546843188737628, guid: d4dfe6d7930564ec39bf1a4a18931368, type: 2}
       propertyPath: m_LocalPosition.z
@@ -3062,7 +3062,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4546843188737628, guid: d4dfe6d7930564ec39bf1a4a18931368, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 1
+      value: 0.53
       objectReference: {fileID: 0}
     - target: {fileID: 4546843188737628, guid: d4dfe6d7930564ec39bf1a4a18931368, type: 2}
       propertyPath: m_LocalPosition.z
