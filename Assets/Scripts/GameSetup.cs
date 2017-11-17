@@ -4,8 +4,8 @@ using System.Collections;
 public class GameSetup : MonoBehaviour
 {
     int ballsToDispense;
-    int ballDropDelayTime;
-    int time;
+    int ballDropDelayTimeTemp;
+    const int BALL_DROP_DELAY_Time = 40;
     int level;
     int levelPauseTime;
 
@@ -16,9 +16,8 @@ public class GameSetup : MonoBehaviour
 	{
         levelPauseTime = 0;
         ballsToDispense = 1;
-        time = 40;
         level = 1;
-        ballDropDelayTime = time;
+        ballDropDelayTimeTemp = BALL_DROP_DELAY_Time;
         setLevelLabel();
 	}
 
@@ -26,7 +25,7 @@ public class GameSetup : MonoBehaviour
     {
         if (levelPauseTime-- <= 0)
         {
-            if (ballDropDelayTime-- <= 0)
+            if (ballDropDelayTimeTemp-- <= 0)
             {
                 if ((ballsToDispense--) > 0)
                 {
@@ -34,16 +33,20 @@ public class GameSetup : MonoBehaviour
                     dropBall();
                 }
 
-                ballDropDelayTime = time;
-            }
+                ballDropDelayTimeTemp = BALL_DROP_DELAY_Time;
+            } 
 
-            // Commence delay between levels, let user relax for a few seconds
             if (levelIsOver())
             {
-                ballsToDispense = ++level;
-                levelPauseTime = 250;
+                changeLevel();
             }
         }
+    }
+
+    void changeLevel()
+    {
+        ballsToDispense = ++level;
+        levelPauseTime = 250;
     }
 
     bool levelIsOver()
