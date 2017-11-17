@@ -28,8 +28,9 @@ public class GameSetup : MonoBehaviour
         {
             if (ballDropDelayTimeTemp-- <= 0)
             {
-                if ((ballsToDispense--) > 0)
+                if (! levelIsOver())
                 {
+                    ballsToDispense--;
                     setLevelLabel();
                     dropBall();
                 }
