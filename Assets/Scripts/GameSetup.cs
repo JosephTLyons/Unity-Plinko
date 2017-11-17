@@ -34,6 +34,6 @@ public class GameSetup : MonoBehaviour
     {
         ball = Instantiate (ballRef) as GameObject;
         float ballXPosition = Random.Range (-570, 570) / 100.0f;
-        ball.transform.position = new Vector3 (ballXPosition, 6, 0);
+        ball.transform.position = new Vector3 (ballXPosition, 5.5f, 0);
     }
 }
