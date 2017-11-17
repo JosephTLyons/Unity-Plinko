@@ -44,15 +44,15 @@ public class GameSetup : MonoBehaviour
         }
     }
 
+    bool levelIsOver()
+    {
+        return (ballsToDispense <= 0);
+    }
+
     void changeLevel()
     {
         ballsToDispense = ++level;
         levelPauseTime = 250;
-    }
-
-    bool levelIsOver()
-    {
-        return (ballsToDispense <= 0);
     }
 
     void dropBall()
