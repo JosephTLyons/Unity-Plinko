@@ -22,9 +22,7 @@ public class GameSetup : MonoBehaviour
         if (ballDropDelayTime-- <= 0)
         {
             if ((ballCount--) > 0)
-            {
                 dropBall();
-            }
 
             ballDropDelayTime = time;
         }
