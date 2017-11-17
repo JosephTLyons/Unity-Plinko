@@ -6,19 +6,19 @@ public class BallControl : MonoBehaviour
 {
     // These attributes are used to limit how quickly the audio sample can play
     // Without them, when the ball bounces, the sound is triggered very quickly and it sounds unnatural
-    int playWoodHitSoundAfterDelay;
+    int woodHitSoundDelayTime;
     public int ballValue;
 
     void Start()
     {
         ballValue = Random.Range (1, 6);
         GetComponentInChildren<TextMesh>().text = ballValue.ToString();
-        playWoodHitSoundAfterDelay = 0;
+        woodHitSoundDelayTime = 0;
     }
 
 	void Update() 
     {
-        playWoodHitSoundAfterDelay--;
+        woodHitSoundDelayTime--;
 	}
 
     void OnCollisionEnter2D(Collision2D collision)
@@ -30,10 +30,10 @@ public class BallControl : MonoBehaviour
 
         else if (collision.gameObject.tag == "Peg")
         {
-            if (playWoodHitSoundAfterDelay <= 0)
+            if (woodHitSoundDelayTime <= 0)
             {
                 GetComponent<AudioSource>().Play();
-                playWoodHitSoundAfterDelay = 8;
+                woodHitSoundDelayTime = 8;
             }
         }
     }
