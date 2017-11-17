@@ -46,9 +46,9 @@ public class GameSetup : MonoBehaviour
 
     void continueGamePlay()
     {
+        dropBall();
         ballsToDispense--;
         setLevelLabel();
-        dropBall();
     }
 
     void changeLevel()
