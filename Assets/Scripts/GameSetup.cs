@@ -29,25 +29,26 @@ public class GameSetup : MonoBehaviour
             if (ballDropDelayTimeTemp-- <= 0)
             {
                 if (! levelIsOver())
-                {
-                    ballsToDispense--;
-                    setLevelLabel();
-                    dropBall();
-                }
+                    continueGamePlay();
 
                 ballDropDelayTimeTemp = BALL_DROP_DELAY_TIME;
             } 
 
             if (levelIsOver())
-            {
                 changeLevel();
-            }
         }
     }
 
     bool levelIsOver()
     {
         return (ballsToDispense <= 0);
+    }
+
+    void continueGamePlay()
+    {
+        ballsToDispense--;
+        setLevelLabel();
+        dropBall();
     }
 
     void changeLevel()
