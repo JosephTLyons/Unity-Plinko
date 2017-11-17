@@ -37,12 +37,18 @@ public class GameSetup : MonoBehaviour
                 ballDropDelayTime = time;
             }
 
-            if (ballCount <= 0)
+            // Commence delay between levels, let user relax for a few seconds
+            if (levelIsOver())
             {
                 ballCount = ++level;
                 levelPauseTime = 250;
             }
         }
+    }
+
+    bool levelIsOver()
+    {
+        return (ballCount <= 0);
     }
 
     void dropBall()
