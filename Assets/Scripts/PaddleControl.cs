@@ -6,12 +6,11 @@ public class PaddleControl : MonoBehaviour
 {
     static int gameScore;
     public KeyCode moveLeft, moveRight;
-    public float speedX;
+    public float speedX = 0;
 
     void Start()
     {
         gameScore = 0;
-        speedX    = 0;
     }
 
 	void Update() 
