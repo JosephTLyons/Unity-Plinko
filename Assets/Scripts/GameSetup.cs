@@ -3,7 +3,7 @@ using System.Collections;
 
 public class GameSetup : MonoBehaviour
 {
-    int ballCount;
+    int ballsToDispense;
     int ballDropDelayTime;
     int time;
     int level;
@@ -15,7 +15,7 @@ public class GameSetup : MonoBehaviour
 	void Start () 
 	{
         levelPauseTime = 0;
-        ballCount = 1;
+        ballsToDispense = 1;
         time = 40;
         level = 1;
         ballDropDelayTime = time;
@@ -28,7 +28,7 @@ public class GameSetup : MonoBehaviour
         {
             if (ballDropDelayTime-- <= 0)
             {
-                if ((ballCount--) > 0)
+                if ((ballsToDispense--) > 0)
                 {
                     setLevelLabel();
                     dropBall();
@@ -40,7 +40,7 @@ public class GameSetup : MonoBehaviour
             // Commence delay between levels, let user relax for a few seconds
             if (levelIsOver())
             {
-                ballCount = ++level;
+                ballsToDispense = ++level;
                 levelPauseTime = 250;
             }
         }
@@ -48,7 +48,7 @@ public class GameSetup : MonoBehaviour
 
     bool levelIsOver()
     {
-        return (ballCount <= 0);
+        return (ballsToDispense <= 0);
     }
 
     void dropBall()
