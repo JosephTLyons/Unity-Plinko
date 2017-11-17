@@ -6,25 +6,38 @@ public class GameSetup : MonoBehaviour
     int ballCount;
     int ballDropDelayTime;
     int time;
+    int level;
+    int levelPauseTime;
 
     static GameObject ball;
     public GameObject ballRef;
 
 	void Start () 
 	{
-        ballCount = 3;
+        levelPauseTime = 0;
+        ballCount = 1;
         time = 40;
+        level = 1;
         ballDropDelayTime = time;
 	}
 
 	void Update()
     {
-        if (ballDropDelayTime-- <= 0)
+        if (levelPauseTime-- <= 0)
         {
-            if ((ballCount--) > 0)
-                dropBall();
+            if (ballDropDelayTime-- <= 0)
+            {
+                if ((ballCount--) > 0)
+                    dropBall();
 
-            ballDropDelayTime = time;
+                ballDropDelayTime = time;
+            }
+
+            if (ballCount <= 0)
+            {
+                ballCount = ++level;
+                levelPauseTime = 250;
+            }
         }
     }
 
