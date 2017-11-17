@@ -14,11 +14,12 @@ public class GameSetup : MonoBehaviour
 
 	void Start () 
 	{
-        levelPauseTime = 0;
-        ballsToDispense = 1;
         level = 1;
-        ballDropDelayTimeTemp = BALL_DROP_DELAY_TIME;
         setLevelLabel();
+        levelPauseTime = 0;
+
+        ballsToDispense = 1;
+        ballDropDelayTimeTemp = BALL_DROP_DELAY_TIME;
 	}
 
 	void Update()
