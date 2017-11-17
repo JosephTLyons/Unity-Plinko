@@ -24,8 +24,10 @@ public class GameSetup : MonoBehaviour
 
 	void Update()
     {
+        // This is used to briefly pause the dropping of balls between levels
         if (levelSwitchPauseTime-- <= 0)
         {
+            // This is used to stagger the dropping of balls, so they don't all drop at once
             if (ballDropDelayTimeTemp-- <= 0)
             {
                 if (! levelIsOver())
