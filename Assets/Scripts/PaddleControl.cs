@@ -4,9 +4,15 @@ using UnityEngine;
 
 public class PaddleControl : MonoBehaviour 
 {
-    static int gameScore = 0;
+    static int gameScore;
     public KeyCode moveLeft, moveRight;
-    public float speedX = 0;
+    public float speedX;
+
+    void Start()
+    {
+        gameScore = 0;
+        speedX    = 0;
+    }
 
 	void Update() 
     {
