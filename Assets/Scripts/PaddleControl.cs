@@ -45,9 +45,4 @@ public class PaddleControl : MonoBehaviour
         gameScore += newValue;
         GetComponentInChildren<TextMesh>().text = gameScore.ToString();
     }
-
-    void OnBecameInvisible()
-    {
-        transform.position = new Vector3 (-transform.position.x, transform.position.y, transform.position.z);
-    }
 }
