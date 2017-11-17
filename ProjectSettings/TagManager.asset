@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Peg
   - Ball
+  - Ball Destroyer
   layers:
   - Default
   - TransparentFX

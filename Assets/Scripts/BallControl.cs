@@ -35,9 +35,4 @@ public class BallControl : MonoBehaviour
             }
         }
     }
-
-    void OnBecameInvisible()
-    {
-        Destroy (gameObject);
-    }
 }

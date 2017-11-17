@@ -64,8 +64,9 @@ public class GameSetup : MonoBehaviour
         ball.transform.position = new Vector3 (ballXPosition, 5.5f, 0);
     }
 
-    void setLevelLabel()
+    public void setLevelLabel()
     {
         GetComponentInChildren<TextMesh>().text = "Level: " + level.ToString();
     }
+        
 }
