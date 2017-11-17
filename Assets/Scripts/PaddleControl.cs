@@ -32,6 +32,13 @@ public class PaddleControl : MonoBehaviour
         if (collision.gameObject.tag == "Ball")
         {
             GetComponent<AudioSource>().Play();
+            setScoreLabel (collision.gameObject.GetComponent<BallControl>().ballValue);
         }
+    }
+
+    void setScoreLabel(int newValue)
+    {
+        gameScore += newValue;
+        GetComponentInChildren<TextMesh>().text = gameScore.ToString();
     }
 }

@@ -7,8 +7,7 @@ public class BallControl : MonoBehaviour
     // These attributes are used to limit how quickly the audio sample can play
     // Without them, when the ball bounces, the sound is triggered very quickly and it sounds unnatural
     int playWoodenHitSoundAfterDelay;
-    int ballValue;
-    public GameObject paddleRef;
+    public int ballValue;
 
     void Start()
     {
@@ -26,8 +25,6 @@ public class BallControl : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
-            // Have a reference to the paddle here and send the value to score
-            
             Destroy (gameObject);
         }
 
