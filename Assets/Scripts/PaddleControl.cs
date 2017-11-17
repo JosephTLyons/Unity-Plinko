@@ -25,9 +25,9 @@ public class PaddleControl : MonoBehaviour
             movePaddleHorizontally (0);
 	}
 
-    void movePaddleHorizontally(float valueToMoveX)
+    void movePaddleHorizontally(float valueToMoveHorizontally)
     {
-        GetComponent<Rigidbody2D>().velocity = new Vector2 (valueToMoveX, 0f);
+        GetComponent<Rigidbody2D>().velocity = new Vector2 (valueToMoveHorizontally, 0f);
     }
 
 
