@@ -19,6 +19,7 @@ public class GameSetup : MonoBehaviour
         time = 40;
         level = 1;
         ballDropDelayTime = time;
+        setLevelLabel();
 	}
 
 	void Update()
@@ -28,7 +29,10 @@ public class GameSetup : MonoBehaviour
             if (ballDropDelayTime-- <= 0)
             {
                 if ((ballCount--) > 0)
+                {
+                    setLevelLabel();
                     dropBall();
+                }
 
                 ballDropDelayTime = time;
             }
@@ -46,5 +50,10 @@ public class GameSetup : MonoBehaviour
         ball = Instantiate (ballRef) as GameObject;
         float ballXPosition = Random.Range (-570, 570) / 100.0f;
         ball.transform.position = new Vector3 (ballXPosition, 5.5f, 0);
+    }
+
+    void setLevelLabel()
+    {
+        GetComponentInChildren<TextMesh>().text = "Level: " + level.ToString();
     }
 }
