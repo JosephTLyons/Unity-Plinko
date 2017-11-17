@@ -5,7 +5,7 @@ public class GameSetup : MonoBehaviour
 {
     int ballsToDispense;
     int ballDropDelayTimeTemp;
-    const int BALL_DROP_DELAY_Time = 40;
+    const int BALL_DROP_DELAY_TIME = 40;
     int level;
     int levelPauseTime;
 
@@ -17,7 +17,7 @@ public class GameSetup : MonoBehaviour
         levelPauseTime = 0;
         ballsToDispense = 1;
         level = 1;
-        ballDropDelayTimeTemp = BALL_DROP_DELAY_Time;
+        ballDropDelayTimeTemp = BALL_DROP_DELAY_TIME;
         setLevelLabel();
 	}
 
@@ -33,7 +33,7 @@ public class GameSetup : MonoBehaviour
                     dropBall();
                 }
 
-                ballDropDelayTimeTemp = BALL_DROP_DELAY_Time;
+                ballDropDelayTimeTemp = BALL_DROP_DELAY_TIME;
             } 
 
             if (levelIsOver())
