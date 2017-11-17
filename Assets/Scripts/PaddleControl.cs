@@ -15,16 +15,21 @@ public class PaddleControl : MonoBehaviour
 
 	void Update() 
     {
-        // Left and right movement of paddle
         if (Input.GetKey (moveLeft))
-            GetComponent<Rigidbody2D>().velocity = new Vector2(-speedX, 0f);
-
+            movePaddleHorizontally (-speedX);
+        
         else if (Input.GetKey (moveRight))
-            GetComponent<Rigidbody2D>().velocity = new Vector2(speedX, 0f);
-
+            movePaddleHorizontally (speedX);
+        
         else
-            GetComponent<Rigidbody2D>().velocity = new Vector2(0f, 0f);
+            movePaddleHorizontally (0);
 	}
+
+    void movePaddleHorizontally(float valueToMoveX)
+    {
+        GetComponent<Rigidbody2D>().velocity = new Vector2 (valueToMoveX, 0f);
+    }
+
 
     void OnCollisionEnter2D(Collision2D collision)
     {
