@@ -7,7 +7,7 @@ public class GameSetup : MonoBehaviour
     int ballDropDelayTimeTemp;
     const int BALL_DROP_DELAY_TIME = 40;
     int level;
-    int levelPauseTime;
+    int levelSwitchPauseTime;
 
     static GameObject ball;
     public GameObject ballRef;
@@ -16,7 +16,7 @@ public class GameSetup : MonoBehaviour
 	{
         level = 1;
         setLevelLabel();
-        levelPauseTime = 0;
+        levelSwitchPauseTime = 0;
 
         ballsToDispense = 1;
         ballDropDelayTimeTemp = BALL_DROP_DELAY_TIME;
@@ -24,7 +24,7 @@ public class GameSetup : MonoBehaviour
 
 	void Update()
     {
-        if (levelPauseTime-- <= 0)
+        if (levelSwitchPauseTime-- <= 0)
         {
             if (ballDropDelayTimeTemp-- <= 0)
             {
@@ -52,7 +52,7 @@ public class GameSetup : MonoBehaviour
     void changeLevel()
     {
         ballsToDispense = ++level;
-        levelPauseTime = 250;
+        levelSwitchPauseTime = 250;
     }
 
     void dropBall()
