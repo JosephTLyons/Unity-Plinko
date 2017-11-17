@@ -60,8 +60,22 @@ public class GameSetup : MonoBehaviour
     void dropBall()
     {
         ball = Instantiate (ballRef) as GameObject;
+
+        placeBallOnRandomXCoordinate();
+        giveBallRandomHorizontalVelocity();
+    }
+
+    void placeBallOnRandomXCoordinate()
+    {
         float ballXPosition = Random.Range (-Screen.width, Screen.width) / 100.0f;
         ball.transform.position = new Vector3 (ballXPosition, 5.5f, 0);
+    }
+
+    // Without this function, there's a chance a ball can fall directly downwards and land balanced on a peg
+    void giveBallRandomHorizontalVelocity()
+    {
+        float ballVelocityOnXAxis = Random.Range (-4, 4);
+        ball.GetComponent<Rigidbody2D>().velocity = new Vector3 (ballVelocityOnXAxis, 0, 0);
     }
 
     public void setLevelLabel()
