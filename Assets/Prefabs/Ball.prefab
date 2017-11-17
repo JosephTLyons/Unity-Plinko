@@ -239,7 +239,7 @@ TextMesh:
   m_FontSize: 85
   m_FontStyle: 0
   m_RichText: 1
-  m_Font: {fileID: 0}
+  m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
   m_Color:
     serializedVersion: 2
     rgba: 4294967295
@@ -254,7 +254,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: efc391f8be36643ebba08d9d544e2781, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  paddleRef: {fileID: 0}
+  ballValue: 0
 --- !u!212 &212213593064289130
 SpriteRenderer:
   m_ObjectHideFlags: 1
