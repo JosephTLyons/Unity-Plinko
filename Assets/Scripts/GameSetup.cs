@@ -58,7 +58,7 @@ public class GameSetup : MonoBehaviour
     void dropBall()
     {
         ball = Instantiate (ballRef) as GameObject;
-        float ballXPosition = Random.Range (-570, 570) / 100.0f;
+        float ballXPosition = Random.Range (-Screen.width, Screen.width) / 100.0f;
         ball.transform.position = new Vector3 (ballXPosition, 5.5f, 0);
     }
 
