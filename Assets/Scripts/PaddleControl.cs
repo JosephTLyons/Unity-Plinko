@@ -29,12 +29,12 @@ public class PaddleControl : MonoBehaviour
             movePaddleHorizontally (0);
 	}
 
-    void movePaddleHorizontally(float valueToMoveHorizontally)
+    void movePaddleHorizontally (float valueToMoveHorizontally)
     {
         GetComponent<Rigidbody2D>().velocity = new Vector2 (valueToMoveHorizontally, 0f);
     }
 
-    void OnCollisionEnter2D(Collision2D collision)
+    void OnCollisionEnter2D (Collision2D collision)
     {
         if (collision.gameObject.tag == "Ball")
         {
@@ -51,7 +51,7 @@ public class PaddleControl : MonoBehaviour
         }
     }
 
-    void setScoreLabel(int newValue)
+    void setScoreLabel (int newValue)
     {
         gameScore += newValue;
         GetComponentInChildren<TextMesh>().text = gameScore.ToString();
