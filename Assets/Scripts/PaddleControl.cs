@@ -34,7 +34,6 @@ public class PaddleControl : MonoBehaviour
         GetComponent<Rigidbody2D>().velocity = new Vector2 (valueToMoveHorizontally, 0f);
     }
 
-
     void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.tag == "Ball")
