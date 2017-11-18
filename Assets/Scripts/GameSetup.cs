@@ -71,11 +71,11 @@ public class GameSetup : MonoBehaviour
     {
         ball = Instantiate (ballRef) as GameObject;
 
-        placeBallOnRandomXCoordinate();
+        placeBallAtRandomXCoordinate();
         giveBallRandomHorizontalVelocity();
     }
 
-    void placeBallOnRandomXCoordinate()
+    void placeBallAtRandomXCoordinate()
     {
         float ballXPosition = Random.Range (-Screen.width, Screen.width) / 100.0f;
         ball.transform.position = new Vector3 (ballXPosition, 5.5f, 0);
