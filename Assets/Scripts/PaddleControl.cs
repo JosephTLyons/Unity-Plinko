@@ -7,7 +7,7 @@ public class PaddleControl : MonoBehaviour
     static int gameScore;
     public KeyCode moveLeft, moveRight;
     public float speedX;
-    int ballsCaptured;
+    public int ballsCaptured;
 
     public GameObject BallDestroyerRef;
 

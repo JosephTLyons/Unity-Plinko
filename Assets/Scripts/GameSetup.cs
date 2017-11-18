@@ -11,6 +11,8 @@ public class GameSetup : MonoBehaviour
 
     static GameObject ball;
     public GameObject ballRef;
+    public GameObject paddleRef;
+    public GameObject plusOneInXLabelRef;
 
 	void Start () 
 	{
@@ -42,6 +44,8 @@ public class GameSetup : MonoBehaviour
                     changeLevel();
             }
         }
+
+        setPlusOneInXLabel();
     }
 
     bool gameIsOver()
@@ -92,5 +96,10 @@ public class GameSetup : MonoBehaviour
     {
         GetComponentInChildren<TextMesh>().text = "Level: " + level.ToString();
     }
-        
+
+    void setPlusOneInXLabel()
+    {
+        int captured = paddleRef.GetComponent<PaddleControl>().ballsCaptured;
+        plusOneInXLabelRef.GetComponent<TextMesh>().text = "+1 in: " + (10 - captured).ToString ();
+    }
 }
