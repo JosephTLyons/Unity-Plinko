@@ -300,9 +300,9 @@ TextMesh:
 
     Controls:
 
-    -Left and Right arrows move the paddle
+    -Left and right arrows move the paddle
 
-    -Spacebar resets the game when game over
+    -Spacebar resets the game when the game is over
 
 
 
