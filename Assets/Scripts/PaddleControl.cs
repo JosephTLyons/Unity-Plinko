@@ -7,10 +7,14 @@ public class PaddleControl : MonoBehaviour
     static int gameScore;
     public KeyCode moveLeft, moveRight;
     public float speedX;
+    int ballsCaptured;
+
+    public GameObject BallDestroyerRef;
 
     void Start()
     {
         gameScore = 0;
+        ballsCaptured = 0;
     }
 
 	void Update() 
@@ -38,6 +42,13 @@ public class PaddleControl : MonoBehaviour
             GetComponent<AudioSource>().Play();
             setScoreLabel (collision.gameObject.GetComponent<BallControl>().ballWorth);
             Destroy (collision.gameObject);
+
+            if (++ballsCaptured == 10)
+            {
+                ballsCaptured = 0;
+                BallDestroyerRef.GetComponent<BallDestroyer>().livesLeft++;
+                BallDestroyerRef.GetComponent<BallDestroyer>().setLivesLeftLabel();
+            }
         }
     }
 

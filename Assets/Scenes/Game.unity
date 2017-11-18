@@ -1940,6 +1940,7 @@ MonoBehaviour:
   moveLeft: 276
   moveRight: 275
   speedX: 10
+  BallDestroyerRef: {fileID: 375468567}
 --- !u!50 &1198165306
 Rigidbody2D:
   serializedVersion: 4

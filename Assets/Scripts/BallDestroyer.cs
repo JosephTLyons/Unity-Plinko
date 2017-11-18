@@ -40,7 +40,7 @@ public class BallDestroyer : MonoBehaviour
         }
     }
 
-    void setLivesLeftLabel()
+    public void setLivesLeftLabel()
     {
         livesLeftLabelRef.GetComponent<TextMesh>().text = "Lives Left: " + livesLeft.ToString();
     }
