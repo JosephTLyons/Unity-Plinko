@@ -26,7 +26,7 @@ public class GameSetup : MonoBehaviour
 
 	void Update()
     {
-        if (! gameIsOver ())
+        if (! gameIsOver())
         {
             // This is used to briefly pause the dropping of balls between levels
             if (levelSwitchPauseTime-- <= 0)
