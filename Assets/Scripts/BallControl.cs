@@ -19,6 +19,11 @@ public class BallControl : MonoBehaviour
 	void Update() 
     {
         woodHitSoundDelayTime--;
+
+        if (Time.timeScale == 0)
+        {
+            Destroy (gameObject); 
+        }
 	}
 
     void OnCollisionEnter2D (Collision2D collision)

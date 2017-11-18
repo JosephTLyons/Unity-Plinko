@@ -27,6 +27,11 @@ public class PaddleControl : MonoBehaviour
         
         else
             movePaddleHorizontally (0);
+
+        if (Time.timeScale == 0)
+        {
+            Destroy (gameObject); 
+        }
 	}
 
     void movePaddleHorizontally (float valueToMoveHorizontally)
