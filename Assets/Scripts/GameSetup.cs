@@ -24,21 +24,29 @@ public class GameSetup : MonoBehaviour
 
 	void Update()
     {
-        // This is used to briefly pause the dropping of balls between levels
-        if (levelSwitchPauseTime-- <= 0)
+        if (! gameIsOver ())
         {
-            // This is used to stagger the dropping of balls, so they don't all drop at once
-            if (ballDropDelayTimeTemp-- <= 0)
+            // This is used to briefly pause the dropping of balls between levels
+            if (levelSwitchPauseTime-- <= 0)
             {
-                if (! levelIsOver())
-                    continueGamePlay();
+                // This is used to stagger the dropping of balls, so they don't all drop at once
+                if (ballDropDelayTimeTemp-- <= 0)
+                {
+                    if (! levelIsOver())
+                        continueGamePlay();
 
-                ballDropDelayTimeTemp = BALL_DROP_DELAY_TIME;
-            } 
+                    ballDropDelayTimeTemp = BALL_DROP_DELAY_TIME;
+                } 
 
-            if (levelIsOver())
-                changeLevel();
+                if (levelIsOver())
+                    changeLevel();
+            }
         }
+    }
+
+    bool gameIsOver()
+    {
+        return (Time.timeScale == 0);
     }
 
     bool levelIsOver()
