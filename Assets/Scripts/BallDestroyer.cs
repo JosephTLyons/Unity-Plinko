@@ -1,10 +1,11 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class BallDestroyer : MonoBehaviour 
 {
-    public GameObject livesLeftLabelRef;
+    public GameObject livesLeftLabelRef, gameOverLabelRef;
     public int livesLeft;
 
     void Start()
@@ -17,7 +18,15 @@ public class BallDestroyer : MonoBehaviour
     {
         if (livesLeft <= 0)
         {
-            // Game Over
+            Time.timeScale = 0;
+            gameOverLabelRef.SetActive (true);
+        }
+
+        // Reset game
+        if (Time.timeScale == 0 && Input.GetKeyUp (KeyCode.Space))
+        {
+            SceneManager.LoadScene ("Game");
+            Time.timeScale = 1;
         }
     }
     
