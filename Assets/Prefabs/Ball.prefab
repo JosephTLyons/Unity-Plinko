@@ -254,7 +254,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: efc391f8be36643ebba08d9d544e2781, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ballValue: 0
+  ballWorth: 0
 --- !u!212 &212213593064289130
 SpriteRenderer:
   m_ObjectHideFlags: 1
