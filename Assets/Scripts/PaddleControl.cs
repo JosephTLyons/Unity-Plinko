@@ -8,6 +8,7 @@ public class PaddleControl : MonoBehaviour
     public KeyCode moveLeft, moveRight;
     public float speedX;
     public int ballsCaptured;
+    const int POINTS_NEEDED_TO_BUY_LIFE = 50;
 
     public GameObject BallDestroyerRef;
 
@@ -42,12 +43,12 @@ public class PaddleControl : MonoBehaviour
 
     bool playerCanBuyAnExtraLife()
     {
-        return (gameScore >= 25);
+        return (gameScore >= POINTS_NEEDED_TO_BUY_LIFE);
     }
 
     void buyExtraLife()
     {
-        setScoreLabel (-25);
+        setScoreLabel (-POINTS_NEEDED_TO_BUY_LIFE);
         BallDestroyerRef.GetComponent<BallDestroyer>().livesLeft++;
         BallDestroyerRef.GetComponent<BallDestroyer>().setLivesLeftLabel();
     }
