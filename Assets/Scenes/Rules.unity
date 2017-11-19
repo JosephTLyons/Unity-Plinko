@@ -294,12 +294,11 @@ TextMesh:
   m_GameObject: {fileID: 1699643011}
   m_Text: "PLINKO MADNESS!\n\nGoal: Capture as many balls as possible to gain as many
     points as possible\n\nControls:\n-Left and right arrows move the paddle\n-Spacebar
-    resets the game when the game is over\n-Enter to gain a new life (50 points needed)\n\nRules:\n1)
-    The amount of balls dispensed increases by one each level completed\n2) You may
-    not be able to capture every ball dispensed,\n\tso you must prioritize ball captures
-    based on their worth\n3) You have 10 lives, every ball lost is a life lost\n4)
-    You gain an extra life every 10 balls captured\n5) You may also purchase a new
-    life for 50 points\n\nPress the Spacebar to begin!"
+    resets the game when the game is over\n\nRules:\n1) The amount of balls dispensed
+    increases by one each level completed\n2) You may not be able to capture every
+    ball dispensed,\n\tso you must prioritize ball captures based on their worth\n3)
+    You have 10 lives, every ball lost is a life lost\n4) You gain an extra life every
+    10 balls captured\n\nPress the Spacebar to begin!"
   m_OffsetZ: 0
   m_CharacterSize: 0.03
   m_LineSpacing: 1
