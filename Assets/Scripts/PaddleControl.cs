@@ -30,11 +30,26 @@ public class PaddleControl : MonoBehaviour
 
         if (Time.timeScale == 0)
             Destroy (gameObject);
+
+        if (Input.GetKeyUp (KeyCode.Return) && playerCanBuyAnExtraLife ())
+            buyExtraLife();
 	}
 
     void movePaddleHorizontally (float valueToMoveHorizontally)
     {
         GetComponent<Rigidbody2D>().velocity = new Vector2 (valueToMoveHorizontally, 0f);
+    }
+
+    bool playerCanBuyAnExtraLife()
+    {
+        return (gameScore >= 25);
+    }
+
+    void buyExtraLife()
+    {
+        setScoreLabel (-25);
+        BallDestroyerRef.GetComponent<BallDestroyer>().livesLeft++;
+        BallDestroyerRef.GetComponent<BallDestroyer>().setLivesLeftLabel();
     }
 
     void OnCollisionEnter2D (Collision2D collision)
