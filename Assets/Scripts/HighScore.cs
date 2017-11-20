@@ -10,7 +10,6 @@ public class HighScore : MonoBehaviour
 	void Start() 
     {
         DontDestroyOnLoad (this);
-        gameObject.SetActive (false);
         highScore = 0;
 	}
 

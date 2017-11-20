@@ -7,28 +7,32 @@ public class BallDestroyer : MonoBehaviour
 {
     public GameObject livesLeftLabelRef, gameOverLabelRef, highScoreRef;
     public int livesLeft;
+    bool gameIsPaused;
 
     void Start()
     {
         livesLeft = 10;
         setLivesLeftLabel();
+        gameIsPaused = false;
     }
 
     void Update()
     {
-        if (livesLeft <= 0)
+        if ((livesLeft <= 0) && (! gameIsPaused))
         {
             gameOverLabelRef.SetActive (true);
-            highScoreRef.SetActive (true);
             highScoreRef.GetComponent<HighScore>().setHighScoreLabel();
             Time.timeScale = 0;
+            gameIsPaused = true;
         }
 
         // Reset game
         if (Time.timeScale == 0 && Input.GetKeyUp (KeyCode.Space))
         {
-            SceneManager.LoadScene ("Game");
+            highScoreRef.SetActive (false);
+            highScoreRef.SetActive (true);
             Time.timeScale = 1;
+            SceneManager.LoadScene ("Game");
         }
     }
     
