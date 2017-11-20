@@ -59,6 +59,6 @@ public class PaddleControl : MonoBehaviour
     void setCurrentScoreLabel (int newValue)
     {
         gameScore += newValue;
-        currentScoreRef.GetComponent<TextMesh>().text = "Current Score: " + gameScore.ToString();
+        currentScoreRef.GetComponent<TextMesh>().text = "Current: " + gameScore.ToString();
     }
 }

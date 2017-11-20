@@ -20,6 +20,6 @@ public class HighScore : MonoBehaviour
         if (paddleControlRef.GetComponent<PaddleControl>().gameScore > highScore)
             highScore = paddleControlRef.GetComponent<PaddleControl>().gameScore;
         
-        highScoreLabelRef.GetComponent<TextMesh>().text = "High Score: " + highScore;
+        highScoreLabelRef.GetComponent<TextMesh>().text = "Score: " + highScore;
     }
 }
