@@ -18,10 +18,10 @@ public class BallDestroyer : MonoBehaviour
     {
         if (livesLeft <= 0)
         {
+            gameOverLabelRef.SetActive (true);
             highScoreRef.SetActive (true);
             highScoreRef.GetComponent<HighScore>().setHighScoreLabel();
             Time.timeScale = 0;
-            gameOverLabelRef.SetActive (true);
         }
 
         // Reset game
