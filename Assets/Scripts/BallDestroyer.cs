@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class BallDestroyer : MonoBehaviour 
 {
-    public GameObject livesLeftLabelRef, gameOverLabelRef;
+    public GameObject livesLeftLabelRef, gameOverLabelRef, highScoreRef;
     public int livesLeft;
 
     void Start()
@@ -18,6 +18,8 @@ public class BallDestroyer : MonoBehaviour
     {
         if (livesLeft <= 0)
         {
+            highScoreRef.SetActive (true);
+            highScoreRef.GetComponent<HighScore>().setHighScoreLabel();
             Time.timeScale = 0;
             gameOverLabelRef.SetActive (true);
         }

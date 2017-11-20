@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PaddleControl : MonoBehaviour 
 {
-    static int gameScore;
+    public int gameScore;
     public KeyCode moveLeft, moveRight;
     public float speedX;
     public int ballsCaptured;
