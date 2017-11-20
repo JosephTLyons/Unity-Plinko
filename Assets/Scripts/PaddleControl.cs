@@ -9,12 +9,13 @@ public class PaddleControl : MonoBehaviour
     public float speedX;
     public int ballsCaptured;
 
-    public GameObject BallDestroyerRef, highScoreObjectRef;
+    public GameObject BallDestroyerRef, currentScoreRef, highScoreObjectRef;
 
     void Start()
     {
         gameScore = 0;
         ballsCaptured = 0;
+        setCurrentScoreLabel (0);
     }
 
 	void Update() 
@@ -42,7 +43,7 @@ public class PaddleControl : MonoBehaviour
         if (collision.gameObject.tag == "Ball")
         {
             GetComponent<AudioSource>().Play();
-            setScoreLabel (collision.gameObject.GetComponent<BallControl>().ballWorth);
+            setCurrentScoreLabel (collision.gameObject.GetComponent<BallControl>().ballWorth);
             Destroy (collision.gameObject);
             highScoreObjectRef.GetComponent<HighScore>().setHighScoreLabel();
 
@@ -55,9 +56,9 @@ public class PaddleControl : MonoBehaviour
         }
     }
 
-    void setScoreLabel (int newValue)
+    void setCurrentScoreLabel (int newValue)
     {
         gameScore += newValue;
-        GetComponentInChildren<TextMesh>().text = gameScore.ToString();
+        currentScoreRef.GetComponent<TextMesh>().text = "Current Score: " + gameScore.ToString();
     }
 }
