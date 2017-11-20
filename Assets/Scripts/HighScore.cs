@@ -4,13 +4,13 @@ using UnityEngine;
 
 public class HighScore : MonoBehaviour 
 {
-    public GameObject paddleControlRef;
-    int highScore;
+    public GameObject paddleControlRef, highScoreLabelRef;
+    static int highScore = 0;
 
 	void Start() 
     {
-        highScore = 0;
         DontDestroyOnLoad (this);
+        highScoreLabelRef.GetComponent<TextMesh>().text = "High Score: " + highScore;
 	}
 
     public void setHighScoreLabel()
@@ -18,6 +18,6 @@ public class HighScore : MonoBehaviour
         if (paddleControlRef.GetComponent<PaddleControl>().gameScore > highScore)
             highScore = paddleControlRef.GetComponent<PaddleControl>().gameScore;
         
-        GetComponent<TextMesh>().text = "High Score: " + highScore;
+        highScoreLabelRef.GetComponent<TextMesh>().text = "High Score: " + highScore;
     }
 }
