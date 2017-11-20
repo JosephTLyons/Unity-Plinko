@@ -9,7 +9,7 @@ public class PaddleControl : MonoBehaviour
     public float speedX;
     public int ballsCaptured;
 
-    public GameObject BallDestroyerRef;
+    public GameObject BallDestroyerRef, highScoreRef;
 
     void Start()
     {
@@ -44,6 +44,7 @@ public class PaddleControl : MonoBehaviour
             GetComponent<AudioSource>().Play();
             setScoreLabel (collision.gameObject.GetComponent<BallControl>().ballWorth);
             Destroy (collision.gameObject);
+            highScoreRef.GetComponent<HighScore>().setHighScoreLabel();
 
             if (++ballsCaptured == 10)
             {

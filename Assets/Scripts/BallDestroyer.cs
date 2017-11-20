@@ -21,16 +21,13 @@ public class BallDestroyer : MonoBehaviour
         if ((livesLeft <= 0) && (! gameIsPaused))
         {
             gameOverLabelRef.SetActive (true);
-            highScoreRef.GetComponent<HighScore>().setHighScoreLabel();
-            Time.timeScale = 0;
             gameIsPaused = true;
+            Time.timeScale = 0;
         }
 
         // Reset game
         if (Time.timeScale == 0 && Input.GetKeyUp (KeyCode.Space))
         {
-            highScoreRef.SetActive (false);
-            highScoreRef.SetActive (true);
             Time.timeScale = 1;
             SceneManager.LoadScene ("Game");
         }

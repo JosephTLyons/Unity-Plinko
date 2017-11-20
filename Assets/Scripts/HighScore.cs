@@ -9,8 +9,8 @@ public class HighScore : MonoBehaviour
 
 	void Start() 
     {
-        DontDestroyOnLoad (this);
         highScore = 0;
+        DontDestroyOnLoad (this);
 	}
 
     public void setHighScoreLabel()
