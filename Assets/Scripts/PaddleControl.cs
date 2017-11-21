@@ -47,12 +47,15 @@ public class PaddleControl : MonoBehaviour
             highScoreObjectRef.GetComponent<HighScore>().setHighScoreLabel();
 
             if (++ballsCaptured == 10)
-            {
-                ballsCaptured = 0;
-                BallDestroyerRef.GetComponent<BallDestroyer>().livesLeft++;
-                BallDestroyerRef.GetComponent<BallDestroyer>().setLivesLeftLabel();
-            }
+                gainExtraLife();
         }
+    }
+
+    void gainExtraLife()
+    {
+        ballsCaptured = 0;
+        BallDestroyerRef.GetComponent<BallDestroyer>().livesLeft++;
+        BallDestroyerRef.GetComponent<BallDestroyer>().setLivesLeftLabel();
     }
 
     void setCurrentScoreLabel (int newValue)
