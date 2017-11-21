@@ -7,30 +7,42 @@ public class BallDestroyer : MonoBehaviour
 {
     public GameObject livesLeftLabelRef, gameOverLabelRef, highScoreRef;
     public int livesLeft;
-    bool gameIsPaused;
 
     void Start()
     {
         livesLeft = 10;
-        gameIsPaused = false;
         setLivesLeftLabel();
     }
 
     void Update()
     {
-        if ((livesLeft <= 0) && (! gameIsPaused))
-        {
-            gameOverLabelRef.SetActive (true);
-            gameIsPaused = true;
-            Time.timeScale = 0;
-        }
+        if (gameIsOver())
+            pauseGame();
+        
+        if (playerWantsToPlayAgain())
+            resetGame();
+    }
 
-        // Reset game
-        if (Time.timeScale == 0 && Input.GetKeyUp (KeyCode.Space))
-        {
-            Time.timeScale = 1;
-            SceneManager.LoadScene ("Game");
-        }
+    bool gameIsOver()
+    {
+        return ((Time.timeScale == 1) && (livesLeft <= 0));
+    }
+
+    void pauseGame()
+    {
+        gameOverLabelRef.SetActive (true);
+        Time.timeScale = 0;
+    }
+
+    bool playerWantsToPlayAgain()
+    {
+        return (Time.timeScale == 0 && Input.GetKeyUp (KeyCode.Space));
+    }
+
+    void resetGame()
+    {
+        Time.timeScale = 1;
+        SceneManager.LoadScene ("Game");
     }
     
     void OnCollisionEnter2D (Collision2D collision)
