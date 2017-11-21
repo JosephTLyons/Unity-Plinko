@@ -28,6 +28,7 @@ public class PaddleControl : MonoBehaviour
         else
             movePaddleHorizontally (0);
 
+        // Remove paddle at end of game so all information text can be seen
         if (Time.timeScale == 0)
             Destroy (gameObject);
 	}

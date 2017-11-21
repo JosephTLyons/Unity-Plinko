@@ -9,8 +9,9 @@ public class HighScore : MonoBehaviour
 
 	void Start() 
     {
-        // High score is split into two objects, the object of the label and the object that has the script
-        // This is so I can use DontDestroyOnLoad() to keep the script from being destroyed and score from being lost
+        // High score is split into two objects, the label object the object that has the script
+        // This is so I can use DontDestroyOnLoad() to keep the script from being destroyed 
+        // and high score from being lost when the scene reloads
         DontDestroyOnLoad (this);
         setHighScoreLabel();
 	}
