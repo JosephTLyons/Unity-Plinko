@@ -5,7 +5,7 @@ using UnityEngine;
 public class HighScore : MonoBehaviour 
 {
     public GameObject paddleControlRef, highScoreLabelRef;
-    static int highScore = 0;
+    public int highScore = 0;
 
 	void Start() 
     {
@@ -13,6 +13,7 @@ public class HighScore : MonoBehaviour
         // This is so I can use DontDestroyOnLoad() to keep the script from being destroyed 
         // and high score from being lost when the scene reloads
         DontDestroyOnLoad (this);
+        highScore = PlayerPrefs.GetInt ("High Score");
         setHighScoreLabel();
 	}
 

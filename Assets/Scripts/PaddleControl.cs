@@ -49,6 +49,8 @@ public class PaddleControl : MonoBehaviour
 
             if (++ballsCaptured == 10)
                 gainExtraLife();
+
+            saveHighScoreToDisk();
         }
     }
 
@@ -63,5 +65,11 @@ public class PaddleControl : MonoBehaviour
     {
         gameScore += newValue;
         currentScoreRef.GetComponent<TextMesh>().text = "Current: " + gameScore.ToString();
+    }
+
+    public void saveHighScoreToDisk()
+    {
+        PlayerPrefs.SetInt ("High Score", highScoreObjectRef.GetComponent<HighScore>().highScore);
+        PlayerPrefs.Save();
     }
 }
