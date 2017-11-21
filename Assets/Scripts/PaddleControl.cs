@@ -30,7 +30,7 @@ public class PaddleControl : MonoBehaviour
 
         // Remove paddle at end of game so all information text can be seen
         if (Time.timeScale == 0)
-            Destroy (gameObject);
+            gameObject.SetActive (false);
 	}
 
     void movePaddleHorizontally (float valueToMoveHorizontally)
