@@ -36,7 +36,7 @@ public class BallDestroyer : MonoBehaviour
 
     bool playerWantsToPlayAgain()
     {
-        return (Time.timeScale == 0 && Input.GetKeyUp (KeyCode.Space));
+        return ((Time.timeScale == 0) && (Input.GetKeyUp (KeyCode.Space)));
     }
 
     void resetGame()
