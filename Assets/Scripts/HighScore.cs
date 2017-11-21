@@ -13,7 +13,11 @@ public class HighScore : MonoBehaviour
         // This is so I can use DontDestroyOnLoad() to keep the script from being destroyed 
         // and high score from being lost when the scene reloads
         DontDestroyOnLoad (this);
-        highScore = PlayerPrefs.GetInt ("High Score");
+
+        // Retrieve saved score on disk
+        if (PlayerPrefs.HasKey ("High Score"))
+            highScore = PlayerPrefs.GetInt ("High Score");
+
         setHighScoreLabel();
 	}
 
