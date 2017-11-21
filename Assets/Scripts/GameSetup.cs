@@ -3,16 +3,11 @@ using System.Collections;
 
 public class GameSetup : MonoBehaviour
 {
-    int ballsToDispense;
-    int ballDropDelayTimeTemp;
+    int ballsToDispense, ballDropDelayTimeTemp, level, levelSwitchPauseTime;
     const int BALL_DROP_DELAY_TIME = 40;
-    int level;
-    int levelSwitchPauseTime;
 
     static GameObject ball;
-    public GameObject ballRef;
-    public GameObject paddleRef;
-    public GameObject plusOneInXLabelRef;
+    public GameObject ballRef, paddleRef, plusOneInXLabelRef;
 
 	void Start () 
 	{

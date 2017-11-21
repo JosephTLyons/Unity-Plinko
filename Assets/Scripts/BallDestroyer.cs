@@ -12,8 +12,8 @@ public class BallDestroyer : MonoBehaviour
     void Start()
     {
         livesLeft = 10;
-        setLivesLeftLabel();
         gameIsPaused = false;
+        setLivesLeftLabel();
     }
 
     void Update()
