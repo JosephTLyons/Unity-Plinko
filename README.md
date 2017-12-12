@@ -6,7 +6,7 @@
 
 In order to play the game, you simply need to run the application, for either Windows or macOS.
 
-Artwork including the ball, peg, left and right walls, and paddle, was done by me using Pixelmator software.
-The background image was a stock image I found at PhotosInbox.com: http://photosinbox.com/textures/light-wood-texture
+Artwork including the ball, peg, left and right walls, and paddle, was created by me using [Pixelmator](http://www.pixelmator.com/) software.
+The background image was a stock image I found at [PhotosInbox](http://photosinbox.com/textures/light-wood-texture).
 
-All sounds were discovered and downloaded from http://www.freesound.org, my go-to website for free sounds for any project.
+All sounds were discovered and downloaded from [Freesound](http://www.freesound.org), my go-to website for free sounds for any project.
