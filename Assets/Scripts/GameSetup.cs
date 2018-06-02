@@ -9,15 +9,15 @@ public class GameSetup : MonoBehaviour
     static GameObject ball;
     public GameObject ballRef, paddleRef, plusOneInXLabelRef;
 
-	void Start()
-	{
+    void Start()
+    {
         level = 1;
         setLevelLabel();
         levelSwitchPauseTime = 0;
 
         ballsToDispense = 1;
         ballDropDelayTimeTemp = BALL_DROP_DELAY_TIME;
-	}
+    }
 
     void Update()
     {

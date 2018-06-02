@@ -7,7 +7,7 @@ public class HighScore : MonoBehaviour
     public GameObject paddleControlRef, highScoreLabelRef;
     public int highScore = 0;
 
-	void Start()
+    void Start()
     {
         // High score is split into two objects, the label object the object that has the script
         // This is so I can use DontDestroyOnLoad() to keep the script from being destroyed
@@ -19,7 +19,7 @@ public class HighScore : MonoBehaviour
             highScore = PlayerPrefs.GetInt ("High Score");
 
         setHighScoreLabel();
-	}
+    }
 
     public void setHighScoreLabel()
     {

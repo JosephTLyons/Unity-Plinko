@@ -17,7 +17,7 @@ public class PaddleControl : MonoBehaviour
         setCurrentScoreLabel (0);
     }
 
-	void Update()
+    void Update()
     {
         if (Input.GetKey (moveLeft))
             movePaddleHorizontally (-speedX);
@@ -31,7 +31,7 @@ public class PaddleControl : MonoBehaviour
         // Remove paddle at end of game so all information text can be seen
         if (Time.timeScale == 0)
             gameObject.SetActive (false);
-	}
+    }
 
     void movePaddleHorizontally (float valueToMoveHorizontally)
     {

@@ -5,9 +5,9 @@ using UnityEngine.SceneManagement;
 
 public class GoToGame : MonoBehaviour
 {
-	void Update()
-	{
-		if (Input.GetKeyUp (KeyCode.Space))
-			SceneManager.LoadScene ("Game");
-	}
+    void Update()
+    {
+        if (Input.GetKeyUp (KeyCode.Space))
+            SceneManager.LoadScene ("Game");
+    }
 }
