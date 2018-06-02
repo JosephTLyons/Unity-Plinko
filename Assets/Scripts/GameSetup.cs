@@ -9,7 +9,7 @@ public class GameSetup : MonoBehaviour
     static GameObject ball;
     public GameObject ballRef, paddleRef, plusOneInXLabelRef;
 
-	void Start () 
+	void Start()
 	{
         level = 1;
         setLevelLabel();
@@ -19,7 +19,7 @@ public class GameSetup : MonoBehaviour
         ballDropDelayTimeTemp = BALL_DROP_DELAY_TIME;
 	}
 
-	void Update()
+    void Update()
     {
         if (! gameIsOver())
         {
@@ -33,7 +33,7 @@ public class GameSetup : MonoBehaviour
                         continueGamePlay();
 
                     ballDropDelayTimeTemp = BALL_DROP_DELAY_TIME;
-                } 
+                }
 
                 if (levelIsOver())
                     changeLevel();
