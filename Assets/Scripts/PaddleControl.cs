@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PaddleControl : MonoBehaviour 
+public class PaddleControl : MonoBehaviour
 {
     public int gameScore, ballsCaptured;
     public float speedX;
@@ -17,14 +17,14 @@ public class PaddleControl : MonoBehaviour
         setCurrentScoreLabel (0);
     }
 
-	void Update() 
+	void Update()
     {
         if (Input.GetKey (moveLeft))
             movePaddleHorizontally (-speedX);
-        
+
         else if (Input.GetKey (moveRight))
             movePaddleHorizontally (speedX);
-        
+
         else
             movePaddleHorizontally (0);
 

@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class GoToGame : MonoBehaviour 
+public class GoToGame : MonoBehaviour
 {
-	void Update() 
+	void Update()
     {
         if (Input.GetKeyUp (KeyCode.Space))
             SceneManager.LoadScene ("Game");
