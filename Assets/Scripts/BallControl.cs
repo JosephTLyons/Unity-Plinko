@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BallControl : MonoBehaviour 
+public class BallControl : MonoBehaviour
 {
     // These attributes are used to limit how quickly the audio sample can play
     // Without them, when the ball bounces, the sound is triggered very quickly and it sounds unnatural
@@ -16,13 +16,13 @@ public class BallControl : MonoBehaviour
         woodHitSoundDelayTime = 0;
     }
 
-	void Update() 
+    void Update()
     {
         woodHitSoundDelayTime--;
 
         if (Time.timeScale == 0)
             Destroy (gameObject);
-	}
+    }
 
     void OnCollisionEnter2D (Collision2D collision)
     {
